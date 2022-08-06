@@ -1,0 +1,35 @@
+.benefits-list-container {
+  display: flex;
+  gap: 30px;
+}
+.benefits-cnt-item {
+  width: 270px;
+}
+
+.benefits-box-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--light-bg-color);
+}
+
+.benefits-icons {
+  background-color: var(--light-bg-color);
+}
+
+.advantages-title {
+  margin-bottom: 10px;
+
+  line-height: calc(16 / 14);
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--main-txt-color);
+}
+
+.advantages-uppertitle {
+  line-height: calc(24 / 14);
+  color: var(--paragraph-txt-color);
+}
