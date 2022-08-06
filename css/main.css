@@ -171,7 +171,7 @@ p {
   background-size: cover;
 }
 
-.hero-title {
+.hero__title {
   margin-top: 0;
   margin-bottom: 0;
   margin-right: auto;
@@ -187,7 +187,7 @@ p {
   color: var(--secondary-txt-color);
 }
 
-.hero-btn {
+.hero__btn {
   margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,27 +219,25 @@ p {
   transition: background-color var(--animations), box-shadow var(--animations), border-radius var(--animations);
   transition: background-color var(--animations), box-shadow var(--animations), border-radius var(--animations), -webkit-box-shadow var(--animations);
 }
-
-.hero-btn:hover,
-.hero-btn:focus {
+.hero__btn:hover, .hero__btn:focus {
   background-color: var(--hero-btn-hover-color);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
-.benefits-list-container {
+.benefits__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
 }
 
-.benefits-cnt-item {
+.benefits__item {
   width: 270px;
 }
 
-.benefits-box-icons {
+.benefits__box-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -255,11 +253,11 @@ p {
   background-color: var(--light-bg-color);
 }
 
-.benefits-icons {
+.benefits__icons {
   background-color: var(--light-bg-color);
 }
 
-.advantages-title {
+.benefits__title {
   margin-bottom: 10px;
   line-height: 1.1428571429;
   font-size: 14px;
@@ -267,7 +265,7 @@ p {
   color: var(--main-txt-color);
 }
 
-.advantages-uppertitle {
+.benefits__uppertitle {
   line-height: 1.7142857143;
   color: var(--paragraph-txt-color);
 }
@@ -276,25 +274,25 @@ p {
   padding-top: 0;
 }
 
-.about-title {
+.about__title {
   margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.1666666667;
   text-align: center;
 }
 
-.about-list-container {
+.about__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
 }
 
-.about-item {
+.about__item {
   position: relative;
 }
 
-.overlay-about-txt {
+.about__txt-overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -321,48 +319,48 @@ p {
   background-color: var(--light-bg-color);
 }
 
-.team-title {
+.team__title {
   margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.1666666667;
   text-align: center;
 }
 
-.team-list-container {
+.team__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
 }
 
-.team-item {
+.team__item {
   background: var(--team-item-bg-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-item-container {
+.team__box {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
 }
 
-.team-item-uppertitle {
+.team__name {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.1875;
 }
 
-.team-item-txt {
+.team__position {
   font-size: 16px;
   line-height: 1.1875;
   color: var(--paragraph-txt-color);
   margin-bottom: 16px;
 }
 
-.team-list-icons {
+.team__socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,7 +373,7 @@ p {
   gap: 10px;
 }
 
-.team-link-icons {
+.team__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -392,14 +390,12 @@ p {
   -webkit-transition: color var(--animations), background-color var(--animations);
   transition: color var(--animations), background-color var(--animations);
 }
-
-.team-link-icons:hover,
-.team-link-icons:focus {
+.team__link:hover, .team__link:focus {
   color: var(--icons-hover-colors);
   background-color: var(--accent-bg-color);
 }
 
-.team-icons {
+.team__icons {
   fill: currentColor;
 }
 

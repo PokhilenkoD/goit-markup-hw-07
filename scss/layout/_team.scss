@@ -2,7 +2,7 @@
   background-color: var(--light-bg-color);
 }
 
-.team-title {
+.team__title {
   margin-bottom: 50px;
 
   font-size: 36px;
@@ -10,25 +10,25 @@
   text-align: center;
 }
 
-.team-list-container {
+.team__list {
   display: flex;
   gap: 30px;
 }
 
-.team-item {
+.team__item {
   background: var(--team-item-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-item-container {
+.team__box {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
 }
 
-.team-item-uppertitle {
+.team__name {
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -36,21 +36,21 @@
   line-height: calc(19 / 16);
 }
 
-.team-item-txt {
+.team__position {
   font-size: 16px;
   line-height: calc(19 / 16);
   color: var(--paragraph-txt-color);
   margin-bottom: 16px;
 }
 
-.team-list-icons {
+.team__socials {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
-.team-link-icons {
+.team__link {
   display: flex;
   width: 44px;
   height: 44px;
@@ -60,14 +60,14 @@
   border-radius: 50%;
 
   transition: color var(--animations), background-color var(--animations);
+
+  &:hover,
+  &:focus {
+    color: var(--icons-hover-colors);
+    background-color: var(--accent-bg-color);
+  }
 }
 
-.team-link-icons:hover,
-.team-link-icons:focus {
-  color: var(--icons-hover-colors);
-  background-color: var(--accent-bg-color);
-}
-
-.team-icons {
+.team__icons {
   fill: currentColor;
 }
