@@ -1,8 +1,8 @@
-.register-form {
+.form-register {
   text-align: center;
 }
 
-.register-form__title {
+.form-register__title {
   display: block;
   margin-bottom: 12px;
 
@@ -13,11 +13,11 @@
   color: var(--main-txt-color);
 }
 
-.register-form__group {
+.form-register__group {
   margin-bottom: 20px;
 }
 
-.register-form__wrap {
+.form-register__wrap {
   display: block;
   position: relative;
   margin-bottom: 10px;
@@ -27,20 +27,7 @@
   }
 }
 
-.register-form__input:focus,
-.register-form__input:hover {
-  border-color: var(--accent-bg-color);
-}
-
-.register-form__input:focus + .register-form-icon {
-  fill: var(--accent-bg-color);
-}
-
-.register-form__input:hover + .register-form-icon {
-  fill: var(--accent-bg-color);
-}
-
-.register-form__label {
+.form-register__label {
   display: block;
   text-align: left;
   margin-bottom: 4px;
@@ -51,8 +38,7 @@
   color: var(--paragraph-txt-color);
 }
 
-.register-form-input,
-.register-form-massage {
+.form-register__input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
@@ -61,33 +47,45 @@
   width: 100%;
 
   transition: border-color var(--animations);
+
+  &:focus,
+  &:hover {
+    border-color: var(--accent-bg-color);
+  }
 }
 
-.register-form-massage {
+.form-register__input--massage {
   resize: none;
   padding: 12px 16px;
   height: 120px;
+
+  &::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: var(--placeholder-txt-color);
+  }
 }
 
-.register-form-massage::placeholder {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.01em;
-  color: var(--placeholder-txt-color);
-}
-
-.register-form-icon {
+.form-register__icon {
   position: absolute;
   bottom: 13px;
   left: 13px;
 
   transition: fill var(--animations);
+
+  .form-register__input:focus + & {
+    fill: var(--accent-bg-color);
+  }
+  .form-register__input:hover + & {
+    fill: var(--accent-bg-color);
+  }
 }
 
-.register-form-agreement {
+.form-register__agreement {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,7 +93,7 @@
   margin-bottom: 30px;
 }
 
-.register-checkbox {
+.form-register__checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -109,43 +107,38 @@
   overflow: hidden;
 }
 
-.register-form-massage:focus,
-.register-form-massage:hover {
-  border-color: var(--accent-bg-color);
-}
-
-.register-checkbox:checked + .register-icon .register-icon-uncheck {
+.form-register__checkbox:checked + .form-register__confirm .form-register__uncheck {
   opacity: 0;
   transition: opacity var(--animations);
 }
 
-.register-icon-check {
+.form-register__check {
   fill: var(--secondary-txt-color);
   opacity: 0;
   transition: opacity var(--animations);
+
+  .form-register__checkbox:checked + .form-register__confirm & {
+    opacity: 1;
+  }
 }
 
-.register-checkbox:checked + .register-icon .register-icon-check {
-  opacity: 1;
-}
-
-.register-checkbox:checked + .register-icon {
+.form-register__checkbox:checked + .form-register__confirm {
   background-color: var(--accent-bg-color);
   border-radius: 2px;
 }
 
-.register-form-agreement-txt {
+.form-register__txt {
   line-height: calc(24 / 14);
   color: var(--agreement-txt-color);
   user-select: none;
 }
 
-.register-form-agreement-link {
+.form-register__link {
   color: var(--accent-txt-color);
   text-underline-position: under;
 }
 
-.form-btn {
+.form__btn {
   padding-top: 10px;
   padding-right: 55px;
   padding-bottom: 10px;

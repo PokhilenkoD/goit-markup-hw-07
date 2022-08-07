@@ -1,32 +1,32 @@
-.portfolio-list-container {
+.filter__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.portfolio-item {
+.filter__project {
   position: relative;
 }
 
-.portfolio-link {
+.filter__link {
   display: block;
   transition: box-shadow var(--animations);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
-.portfolio-link:hover,
-.portfolio-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.portfolio-item-container {
+.filter__product {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   padding: 20px 24px;
 }
 
-.portfolio-item-uppertitle {
+.filter__uppertitle {
   margin-bottom: 4px;
 
   font-size: 18px;
@@ -34,18 +34,18 @@
   letter-spacing: 0.06em;
 }
 
-.portfolio-item-txt {
+.filter__txt {
   font-size: 16px;
   line-height: calc(30 / 16);
   color: var(--paragraph-txt-color);
 }
 
-.overlay-box {
+.filter__overlay {
   position: relative;
   overflow: hidden;
 }
 
-.overlay {
+.filter__overlay-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -61,14 +61,14 @@
   backdrop-filter: blur(3px);
 
   transition: transform var(--animations);
+
+  .filter__link:hover &,
+  .filter__link:focus & {
+    transform: translateY(0);
+  }
 }
 
-.portfolio-link:hover .overlay,
-.portfolio-link:focus .overlay {
-  transform: translateY(0);
-}
-
-.overlay-txt {
+.filter__overlay-desc {
   font-style: normal;
   font-size: 18px;
   line-height: calc(28 / 18);

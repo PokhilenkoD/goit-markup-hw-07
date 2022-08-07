@@ -645,7 +645,7 @@ p {
   background-color: var(--hero-btn-hover-color);
 }
 
-.portfolio-filter-container {
+.filter__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -656,7 +656,7 @@ p {
   margin-bottom: 50px;
 }
 
-.portfolio-filter-btn {
+.filter__btn {
   padding-top: 6px;
   padding-right: 22px;
   padding-bottom: 6px;
@@ -676,8 +676,14 @@ p {
   transition: color var(--animations), background-color var(--animations), box-shadow var(--animations);
   transition: color var(--animations), background-color var(--animations), box-shadow var(--animations), -webkit-box-shadow var(--animations);
 }
+.filter__btn:hover, .filter__btn:focus {
+  color: var(--secondary-txt-color);
+  background-color: var(--accent-bg-color);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 
-.portfolio-filter-btn-accent {
+.filter__btn--accent {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
@@ -686,15 +692,7 @@ p {
   background-color: var(--accent-bg-color);
 }
 
-.portfolio-filter-btn:hover,
-.portfolio-filter-btn:focus {
-  color: var(--secondary-txt-color);
-  background-color: var(--accent-bg-color);
-  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.portfolio-list-container {
+.filter__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -703,50 +701,48 @@ p {
   gap: 30px;
 }
 
-.portfolio-item {
+.filter__project {
   position: relative;
 }
 
-.portfolio-link {
+.filter__link {
   display: block;
   -webkit-transition: -webkit-box-shadow var(--animations);
   transition: -webkit-box-shadow var(--animations);
   transition: box-shadow var(--animations);
   transition: box-shadow var(--animations), -webkit-box-shadow var(--animations);
 }
-
-.portfolio-link:hover,
-.portfolio-link:focus {
+.filter__link:hover, .filter__link:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-item-container {
+.filter__product {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   padding: 20px 24px;
 }
 
-.portfolio-item-uppertitle {
+.filter__uppertitle {
   margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 
-.portfolio-item-txt {
+.filter__txt {
   font-size: 16px;
   line-height: 1.875;
   color: var(--paragraph-txt-color);
 }
 
-.overlay-box {
+.filter__overlay {
   position: relative;
   overflow: hidden;
 }
 
-.overlay {
+.filter__overlay-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -764,14 +760,12 @@ p {
   transition: transform var(--animations);
   transition: transform var(--animations), -webkit-transform var(--animations);
 }
-
-.portfolio-link:hover .overlay,
-.portfolio-link:focus .overlay {
+.filter__link:hover .filter__overlay-box, .filter__link:focus .filter__overlay-box {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.overlay-txt {
+.filter__overlay-desc {
   font-style: normal;
   font-size: 18px;
   line-height: 1.5555555556;
@@ -857,11 +851,11 @@ p {
   fill: var(--accent-bg-color);
 }
 
-.register-form {
+.form-register {
   text-align: center;
 }
 
-.register-form__title {
+.form-register__title {
   display: block;
   margin-bottom: 12px;
   font-size: 20px;
@@ -871,33 +865,20 @@ p {
   color: var(--main-txt-color);
 }
 
-.register-form__group {
+.form-register__group {
   margin-bottom: 20px;
 }
 
-.register-form__wrap {
+.form-register__wrap {
   display: block;
   position: relative;
   margin-bottom: 10px;
 }
-.register-form__wrap:last-child {
+.form-register__wrap:last-child {
   margin-bottom: 0;
 }
 
-.register-form__input:focus,
-.register-form__input:hover {
-  border-color: var(--accent-bg-color);
-}
-
-.register-form__input:focus + .register-form-icon {
-  fill: var(--accent-bg-color);
-}
-
-.register-form__input:hover + .register-form-icon {
-  fill: var(--accent-bg-color);
-}
-
-.register-form__label {
+.form-register__label {
   display: block;
   text-align: left;
   margin-bottom: 4px;
@@ -907,8 +888,7 @@ p {
   color: var(--paragraph-txt-color);
 }
 
-.register-form-input,
-.register-form-massage {
+.form-register__input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
@@ -918,14 +898,52 @@ p {
   -webkit-transition: border-color var(--animations);
   transition: border-color var(--animations);
 }
+.form-register__input:focus, .form-register__input:hover {
+  border-color: var(--accent-bg-color);
+}
 
-.register-form-massage {
+.form-register__input--massage {
   resize: none;
   padding: 12px 16px;
   height: 120px;
 }
-
-.register-form-massage::-webkit-input-placeholder {
+.form-register__input--massage::-webkit-input-placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: var(--placeholder-txt-color);
+}
+.form-register__input--massage::-moz-placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: var(--placeholder-txt-color);
+}
+.form-register__input--massage:-ms-input-placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: var(--placeholder-txt-color);
+}
+.form-register__input--massage::-ms-input-placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: var(--placeholder-txt-color);
+}
+.form-register__input--massage::placeholder {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -935,55 +953,21 @@ p {
   color: var(--placeholder-txt-color);
 }
 
-.register-form-massage::-moz-placeholder {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.01em;
-  color: var(--placeholder-txt-color);
-}
-
-.register-form-massage:-ms-input-placeholder {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.01em;
-  color: var(--placeholder-txt-color);
-}
-
-.register-form-massage::-ms-input-placeholder {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.01em;
-  color: var(--placeholder-txt-color);
-}
-
-.register-form-massage::placeholder {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.01em;
-  color: var(--placeholder-txt-color);
-}
-
-.register-form-icon {
+.form-register__icon {
   position: absolute;
   bottom: 13px;
   left: 13px;
   -webkit-transition: fill var(--animations);
   transition: fill var(--animations);
 }
+.form-register__input:focus + .form-register__icon {
+  fill: var(--accent-bg-color);
+}
+.form-register__input:hover + .form-register__icon {
+  fill: var(--accent-bg-color);
+}
 
-.register-form-agreement {
+.form-register__agreement {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -997,7 +981,7 @@ p {
   margin-bottom: 30px;
 }
 
-.register-checkbox {
+.form-register__checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1011,34 +995,28 @@ p {
   overflow: hidden;
 }
 
-.register-form-massage:focus,
-.register-form-massage:hover {
-  border-color: var(--accent-bg-color);
-}
-
-.register-checkbox:checked + .register-icon .register-icon-uncheck {
+.form-register__checkbox:checked + .form-register__confirm .form-register__uncheck {
   opacity: 0;
   -webkit-transition: opacity var(--animations);
   transition: opacity var(--animations);
 }
 
-.register-icon-check {
+.form-register__check {
   fill: var(--secondary-txt-color);
   opacity: 0;
   -webkit-transition: opacity var(--animations);
   transition: opacity var(--animations);
 }
-
-.register-checkbox:checked + .register-icon .register-icon-check {
+.form-register__checkbox:checked + .form-register__confirm .form-register__check {
   opacity: 1;
 }
 
-.register-checkbox:checked + .register-icon {
+.form-register__checkbox:checked + .form-register__confirm {
   background-color: var(--accent-bg-color);
   border-radius: 2px;
 }
 
-.register-form-agreement-txt {
+.form-register__txt {
   line-height: 1.7142857143;
   color: var(--agreement-txt-color);
   -webkit-user-select: none;
@@ -1047,12 +1025,12 @@ p {
           user-select: none;
 }
 
-.register-form-agreement-link {
+.form-register__link {
   color: var(--accent-txt-color);
   text-underline-position: under;
 }
 
-.form-btn {
+.form__btn {
   padding-top: 10px;
   padding-right: 55px;
   padding-bottom: 10px;
