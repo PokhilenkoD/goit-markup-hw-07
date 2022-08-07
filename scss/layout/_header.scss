@@ -2,24 +2,9 @@
   border-bottom: 1px solid var(--header-line-color);
 }
 
-.header__container {
+.header__content {
   display: flex;
   align-items: center;
-}
-
-.header__logo {
-  display: flex;
-  margin-right: 93px;
-
-  color: var(--main-txt-color);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
-  font-family: 'Raleway';
-}
-
-.header__logo--accent {
-  color: var(--accent-txt-color);
 }
 
 .header__contacts-list {

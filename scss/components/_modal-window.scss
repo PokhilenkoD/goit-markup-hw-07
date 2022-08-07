@@ -13,14 +13,14 @@
   pointer-events: initial;
 
   transition: opacity var(--animations), visibility var(--animations);
-}
 
-.backdrop.is-hidden {
-  opacity: 0;
-  /* visibility:hidden доступность читалкам  */
-  visibility: hidden;
-  /*pointer-events: none отменяет клики на элементы  */
-  pointer-events: none;
+  &.is-hidden {
+    opacity: 0;
+    /* visibility:hidden доступность читалкам  */
+    visibility: hidden;
+    /*pointer-events: none отменяет клики на элементы  */
+    pointer-events: none;
+  }
 }
 
 .modal {
@@ -42,14 +42,14 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: transform var(--animations), opacity var(--animations);
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.3) rotate(1turn);
+    opacity: 0;
+  }
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.3) rotate(1turn);
-  opacity: 0;
-}
-
-.modal-btn {
+.modal__btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -67,10 +67,10 @@
   background-color: transparent;
 }
 
-.modal-btn-icon {
+.modal__icon {
   transition: fill var(--animations);
-}
 
-.modal-btn-icon:hover {
-  fill: var(--accent-bg-color);
+  &:hover {
+    fill: var(--accent-bg-color);
+  }
 }

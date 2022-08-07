@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.register-form-title {
+.register-form__title {
   display: block;
   margin-bottom: 12px;
 
@@ -13,34 +13,34 @@
   color: var(--main-txt-color);
 }
 
-.register-form-group {
+.register-form__group {
   margin-bottom: 20px;
 }
 
-.register-form-wrap {
+.register-form__wrap {
   display: block;
   position: relative;
   margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.register-form-wrap:last-child {
-  margin-bottom: 0;
-}
-
-.register-form-input:focus,
-.register-form-input:hover {
+.register-form__input:focus,
+.register-form__input:hover {
   border-color: var(--accent-bg-color);
 }
 
-.register-form-input:focus + .register-form-icon {
+.register-form__input:focus + .register-form-icon {
   fill: var(--accent-bg-color);
 }
 
-.register-form-input:hover + .register-form-icon {
+.register-form__input:hover + .register-form-icon {
   fill: var(--accent-bg-color);
 }
 
-.register-form-label {
+.register-form__label {
   display: block;
   text-align: left;
   margin-bottom: 4px;

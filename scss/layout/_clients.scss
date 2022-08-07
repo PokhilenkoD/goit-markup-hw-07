@@ -1,4 +1,4 @@
-.clients-title {
+.clients__title {
   font-style: normal;
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -6,12 +6,12 @@
   margin-bottom: 50px;
 }
 
-.clients-list {
+.clients__list {
   display: flex;
   gap: 30px;
 }
 
-.clients-link {
+.clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,14 +22,14 @@
   color: var(--icons-color);
 
   transition: color var(--animations), border-color var(--animations);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-txt-color);
+    border-color: var(--accent-txt-color);
+  }
 }
 
-.clients-link:hover,
-.clients-link:focus {
-  color: var(--accent-txt-color);
-  border-color: var(--accent-txt-color);
-}
-
-.clients-icons {
+.clients__icons {
   fill: currentColor;
 }
